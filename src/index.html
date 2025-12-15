@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
+      integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section class="block">
+      <div class="container">
+        <form class="js-search-photo form">
+          <div class="form-group m-2">
+            <input type="text" class="form-control" name="query" />
+          </div>
+          <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+
+        <span class="loader hidden"></span>
+
+        <ul class="gallery"></ul>
+      </div>
+    </section>
+
+    <script src="./main.js" type="module"></script>
+    <script src="./js/pixabay-api.js" type="module"></script>
+    <script src="./js/render-functions.js" type="module"></script>
+  </body>
+</html>
