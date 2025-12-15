@@ -1,0 +1,222 @@
+.order {
+  padding: 96px 16px 64px;
+}
+
+.order__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: linear-gradient(138deg, #f1fff5 0%, #fdfcf7 64%, #ffffff 100%);
+  border-radius: 36px;
+  padding: 56px;
+  box-shadow: 0 25px 80px rgba(11, 39, 26, 0.08);
+}
+
+.order__intro {
+  max-width: 640px;
+}
+
+.order__eyebrow {
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--color-primary);
+  margin: 0 0 12px;
+  font-size: 0.85rem;
+}
+
+.order__title {
+  font-size: clamp(2rem, 2.8vw, 3.25rem);
+  line-height: 1.1;
+  margin: 0 0 20px;
+  color: var(--color-dark);
+}
+
+.order__description {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 1.05rem;
+}
+
+.order__grid {
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  align-items: start;
+}
+
+.order__content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.order__benefits {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.order__benefit {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 24px;
+  padding: 20px 24px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  border: 1px solid var(--color-border);
+}
+
+.order__benefit-number {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--color-surface-alt);
+  color: var(--color-primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.order__benefit-title {
+  margin: 0 0 6px;
+  font-size: 1.1rem;
+  color: var(--color-dark);
+}
+
+.order__benefit-text {
+  margin: 0;
+  color: var(--color-muted);
+}
+
+.order__metrics {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 16px;
+}
+
+.order__metric {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  border: 1px solid var(--color-border);
+  text-align: center;
+}
+
+.order__metric-value {
+  display: block;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.order__metric-label {
+  color: var(--color-muted);
+  font-size: 0.92rem;
+}
+
+.order__form {
+  background-color: var(--color-surface);
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: 0 25px 70px rgba(3, 17, 11, 0.08);
+  border: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.order__field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.order__label {
+  font-weight: 600;
+  color: var(--color-dark);
+}
+
+.order__input,
+.order__textarea {
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid var(--color-border);
+  font: inherit;
+  background-color: #f8faf8;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.order__input:focus,
+.order__textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(32, 160, 92, 0.15);
+}
+
+.order__textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.order__submit {
+  border: none;
+  border-radius: 999px;
+  padding: 16px 24px;
+  background-color: var(--color-primary);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 20px 40px rgba(32, 160, 92, 0.3);
+}
+
+.order__submit:hover,
+.order__submit:focus-visible {
+  transform: translateY(-1px);
+  box-shadow: 0 24px 45px rgba(32, 160, 92, 0.35);
+}
+
+.order__submit:focus-visible {
+  outline: 3px solid rgba(32, 160, 92, 0.3);
+  outline-offset: 2px;
+}
+
+.order__privacy {
+  font-size: 0.88rem;
+  color: var(--color-muted);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .order__container {
+    padding: 36px 28px;
+  }
+
+  .order {
+    padding: 72px 12px 48px;
+  }
+}
+
+@media (max-width: 480px) {
+  .order__container {
+    padding: 28px 20px;
+    border-radius: 28px;
+  }
+
+  .order__benefit {
+    flex-direction: column;
+  }
+
+  .order__form {
+    padding: 24px;
+  }
+}
