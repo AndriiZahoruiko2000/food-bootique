@@ -47,102 +47,127 @@
 </header>
 
     <main class="page">
-      <section class="hero">
-  <div class="hero__container">
-    <div class="hero__content">
-      <p class="hero__eyebrow">Farm-to-table</p>
-      <h1 class="hero__title">Taste the best organic produce every day</h1>
-      <p class="hero__text">
-        Food Boutique partners with local farmers and artisans to deliver
-        premium groceries tailored to your lifestyle.
-      </p>
-      <div class="hero__actions">
-        <button class="btn btn--primary">Shop now</button>
-        <button class="btn btn--ghost">How it works</button>
-      </div>
-      <ul class="hero__stats">
-        <li>
-          <span class="hero__stat-value">1200+</span>
-          <span class="hero__stat-label">Happy clients</span>
-        </li>
-        <li>
-          <span class="hero__stat-value">96%</span>
-          <span class="hero__stat-label">Repeat orders</span>
-        </li>
-      </ul>
-    </div>
-    <div class="hero__media">
-      <img src="https://picsum.photos/520/520" alt="Fresh veggies" />
-      <div class="hero__card">
-        <p>Delivering freshness in 1 hour</p>
-      </div>
-    </div>
+      <section class="cart">
+  <div class="cart__container">
+    <h2 class="cart__title">Your cart</h2>
+    <ul class="cart__list"></ul>
   </div>
 </section>
 
-      <div class="page__columns">
-        <section class="products" id="products">
-  <div class="products__container">
-    <div class="products__header">
-      <div>
-        <p class="title-sm">Catalog</p>
-        <h2 class="section__title">Hand-picked items for every meal</h2>
-        <p class="section__text">
-          Filter through hundreds of products to curate your perfect grocery
-          list.
-        </p>
+      <section class="order" id="order">
+  <div class="order__container">
+    <div class="order__intro">
+      <p class="order__eyebrow">Quick order</p>
+      <h2 class="order__title">Fresh groceries delivered to your door</h2>
+      <p class="order__description">
+        Tell us how to reach you and we will take care of the rest. Our team will
+        help you complete an order, suggest perfect items and schedule a
+        delivery window that works with your day.
+      </p>
+    </div>
+    <div class="order__grid">
+      <div class="order__content">
+        <ul class="order__benefits">
+          <li class="order__benefit">
+            <span class="order__benefit-number">01</span>
+            <div>
+              <h3 class="order__benefit-title">Select your favorites</h3>
+              <p class="order__benefit-text">
+                Choose seasonal fruits, vegetables and artisan goods from our
+                curated catalog.
+              </p>
+            </div>
+          </li>
+          <li class="order__benefit">
+            <span class="order__benefit-number">02</span>
+            <div>
+              <h3 class="order__benefit-title">Share delivery details</h3>
+              <p class="order__benefit-text">
+                Tell us when and where to deliver &mdash; we pack everything with
+                care so it arrives perfectly fresh.
+              </p>
+            </div>
+          </li>
+          <li class="order__benefit">
+            <span class="order__benefit-number">03</span>
+            <div>
+              <h3 class="order__benefit-title">Enjoy the taste</h3>
+              <p class="order__benefit-text">
+                Sit back and enjoy premium groceries tailored to your lifestyle
+                and taste preferences.
+              </p>
+            </div>
+          </li>
+        </ul>
+        <ul class="order__metrics">
+          <li class="order__metric">
+            <span class="order__metric-value">48+</span>
+            <span class="order__metric-label">Seasonal items</span>
+          </li>
+          <li class="order__metric">
+            <span class="order__metric-value">24/7</span>
+            <span class="order__metric-label">Personal support</span>
+          </li>
+          <li class="order__metric">
+            <span class="order__metric-value">30 min</span>
+            <span class="order__metric-label">Order callback</span>
+          </li>
+        </ul>
       </div>
-      <form class="products__filters" action="" novalidate>
-        <label class="products__search">
-          <span class="visually-hidden">Search products</span>
-          <input type="text" placeholder="Search" />
-        </label>
-        <label>
-          <span class="visually-hidden">Category</span>
-          <select class="products-categories js-products-categories">
-            <option value="">All categories</option>
-          </select>
-        </label>
-        <label>
-          <span class="visually-hidden">Sort by</span>
-          <select></select>
-        </label>
+      <form class="order__form" action="" novalidate>
+        <div class="order__field">
+          <label class="order__label" for="order-name">Full name</label>
+          <input
+            class="order__input"
+            type="text"
+            name="name"
+            id="order-name"
+            placeholder="Your name"
+            required
+          />
+        </div>
+        <div class="order__field">
+          <label class="order__label" for="order-phone">Phone</label>
+          <input
+            class="order__input"
+            type="tel"
+            name="phone"
+            id="order-phone"
+            placeholder="(000) 000-0000"
+            required
+          />
+        </div>
+        <div class="order__field">
+          <label class="order__label" for="order-email">Email</label>
+          <input
+            class="order__input"
+            type="email"
+            name="email"
+            id="order-email"
+            placeholder="Email address"
+            required
+          />
+        </div>
+        <div class="order__field">
+          <label class="order__label" for="order-message">Delivery notes</label>
+          <textarea
+            class="order__textarea"
+            name="message"
+            id="order-message"
+            rows="4"
+            placeholder="Allergies, wishes, timing..."
+          ></textarea>
+        </div>
+        <button class="order__submit" type="submit">Place an order</button>
+        <p class="order__privacy">
+          By sending a request you confirm that you accept the Privacy Policy and
+          agree to be contacted for order details.
+        </p>
       </form>
     </div>
-    <ul class="products__list js-products__list"></ul>
   </div>
 </section>
 
-        <div class="page__sidebar">
-          <section class="popular" id="popular">
-  <div class="popular__container">
-    <div class="popular__header">
-      <p class="title-sm">Popular</p>
-      <h2 class="section__title">Customer favorites</h2>
-      <p class="section__text">
-        Trending products that always sell out first. Add them to your cart
-        before they are gone.
-      </p>
-    </div>
-    <ul class="popular__list js-popular__list"></ul>
-  </div>
-</section>
-
-          <section class="discounts" id="discounts">
-  <div class="discounts__container">
-    <div class="discounts__header">
-      <p class="title-sm">Deals</p>
-      <h2 class="section__title">Discount products</h2>
-      <p class="section__text">
-        Limited offers updated daily. Save on organic picks while stocks last.
-      </p>
-    </div>
-    <ul class="discounts__list js-discounts__list"></ul>
-  </div>
-</section>
-
-        </div>
-      </div>
     </main>
     <footer class="footer">
   <div class="footer__container">
