@@ -1,0 +1,1 @@
+export const LS_CART_ITEMS_KEY = 'LS_CART_ITEMS_KEY';

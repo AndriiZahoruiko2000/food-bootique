@@ -9,20 +9,31 @@
           list.
         </p>
       </div>
-      <form class="products__filters" action="" novalidate>
+      <form class="products__filters js-products__filters" action="" novalidate>
         <label class="products__search">
           <span class="visually-hidden">Search products</span>
-          <input type="text" placeholder="Search" />
+          <input type="text" placeholder="Search" name="name" />
         </label>
         <label>
           <span class="visually-hidden">Category</span>
-          <select class="products-categories js-products-categories">
+          <select
+            class="products-categories js-products-categories"
+            name="category"
+          >
             <option value="">All categories</option>
           </select>
         </label>
         <label>
           <span class="visually-hidden">Sort by</span>
-          <select></select>
+          <select name="sortName">
+            <option value="{byABC: true}">A to Z</option>
+            <option value="{byABC: false}">Z to A</option>
+            <option value="{byPrice: true}">Cheap</option>
+            <option value="{byPrice: false}">Expensive</option>
+            <option value="{byPopularity: true}">Popular</option>
+            <option value="{byPopularity: false}">Not popular</option>
+            <option value="{}">Show all</option>
+          </select>
         </label>
       </form>
     </div>

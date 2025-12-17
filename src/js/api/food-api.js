@@ -1,8 +1,7 @@
 import axios from 'axios';
 
-export async function getProdcuts(page, search, category, sort) {
-  const baseURL =
-    'https://food-boutique.b.goit.study/api/products?page=1&limit=9';
+export async function getProdcuts({ page = 1, search, category, sort } = {}) {
+  const baseURL = 'https://food-boutique.b.goit.study/api/products';
   const endPoint = '';
   const url = baseURL + endPoint;
 
@@ -10,7 +9,8 @@ export async function getProdcuts(page, search, category, sort) {
     page,
     keyword: search,
     category,
-    [sort]: true,
+    ...sort,
+    limit: 9,
   };
 
   const res = await axios.get(url, { params });
@@ -50,11 +50,18 @@ export async function getDiscountProducts(query) {
 
 //!================================================
 
-async function getProductById(id) {
+export async function getProductById(id) {
   const baseURL = 'https://food-boutique.b.goit.study/';
   const endPoint = `api/products/${id}`;
   const url = baseURL + endPoint;
 
   const res = await axios.get(url);
   return res.data;
+}
+//!================================================
+
+export async function getProductByIds(ids) {
+  const promises = ids.map(getProductById);
+  const result = await Promise.all(promises);
+  return result;
 }
