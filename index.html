@@ -11,9 +11,11 @@
       referrerpolicy="no-referrer"
     />
     <title>Document</title>
-    <script type="module" crossorigin src="/goit-js-hw-11/assets/vendor-2s9xPmg-.js"></script>
-    <script type="module" crossorigin src="/goit-js-hw-11/assets/main-D5cmGIWZ.js"></script>
-    <link rel="stylesheet" crossorigin href="/goit-js-hw-11/assets/main-CMt0GVbc.css">
+    <script type="module" crossorigin src="/goit-js-hw-11/index.js"></script>
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-11/assets/vendor-11iTKtxO.js">
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-11/assets/modal-CpU8CalW.js">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-11/assets/vendor-C3QZVnZz.css">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-11/assets/modal-BXftul-2.css">
   </head>
   <body>
     <header class="header">
@@ -36,12 +38,7 @@
       </ul>
     </nav>
     <div class="header__actions">
-      <button class="header__cart" type="button" aria-label="Open cart">
-        <span class="header__cart-count">2</span>
-      </button>
-      <button class="header__menu" type="button" aria-label="Open menu">
-        <span aria-hidden="true"></span>
-      </button>
+      <a href="./cart.html">cart</a>
     </div>
   </div>
 </header>
@@ -92,20 +89,31 @@
           list.
         </p>
       </div>
-      <form class="products__filters" action="" novalidate>
+      <form class="products__filters js-products__filters" action="" novalidate>
         <label class="products__search">
           <span class="visually-hidden">Search products</span>
-          <input type="text" placeholder="Search" />
+          <input type="text" placeholder="Search" name="name" />
         </label>
         <label>
           <span class="visually-hidden">Category</span>
-          <select class="products-categories js-products-categories">
+          <select
+            class="products-categories js-products-categories"
+            name="category"
+          >
             <option value="">All categories</option>
           </select>
         </label>
         <label>
           <span class="visually-hidden">Sort by</span>
-          <select></select>
+          <select name="sortName">
+            <option value="{byABC: true}">A to Z</option>
+            <option value="{byABC: false}">Z to A</option>
+            <option value="{byPrice: true}">Cheap</option>
+            <option value="{byPrice: false}">Expensive</option>
+            <option value="{byPopularity: true}">Popular</option>
+            <option value="{byPopularity: false}">Not popular</option>
+            <option value="{}">Show all</option>
+          </select>
         </label>
       </form>
     </div>
@@ -208,15 +216,6 @@
   </div>
 </footer>
 
-    <div class="modal" hidden>
-  <div class="modal__dialog">
-    <button class="modal__close" type="button" aria-label="Close">&times;</button>
-    <div class="modal__body">
-      <h2>Cart summary</h2>
-      <p>Checkout form goes here.</p>
-    </div>
-  </div>
-</div>
 
   </body>
 </html>
