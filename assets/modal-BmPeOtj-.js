@@ -100,4 +100,4 @@ let n;async function x(t){if(t.target===t.currentTarget||t.target.closest("butto
         ${t}
     </div>
 `,{onShow:e=>{document.body.classList.add("is-modal-open"),e.element().addEventListener("click",m),document.addEventListener("keydown",b)},onClose:e=>{document.body.classList.remove("is-modal-open"),e.element().removeEventListener("click",m),document.removeEventListener("keydown",b)}}),n.show()}function m(t){if(t.target.closest(".modal__close")){g();return}const e=t.target.closest(".modal-card__button");if(!e)return;const a=e.dataset.id,o=P(a)?"Remove from cart":"Add to cart";document.querySelectorAll(`button[data-id="${a}"]`).forEach(r=>{r.textContent=o})}function b(t){t.key==="Escape"&&g()}function g(){n==null||n.close()}export{d as L,k as a,A as b,U as c,P as d,E as e,O as f,z as g,x as h,I as i,D as j,M as k,f as l,R as r};
-//# sourceMappingURL=modal-CpU8CalW.js.map
+//# sourceMappingURL=modal-BmPeOtj-.js.map
