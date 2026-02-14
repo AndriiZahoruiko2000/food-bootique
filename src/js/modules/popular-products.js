@@ -5,7 +5,7 @@ import { handleModalOpenClick } from './modal';
 
 document.addEventListener('DOMContentLoaded', async () => {
   const response = await getPopularProducts();
-  const markupByPopularity = createTemplatePopularProducts(response);
+  const markupByPopularity = createTemplatePopularProducts(response.slice(0, 3));
   refs.popularList.innerHTML = markupByPopularity;
 });
 

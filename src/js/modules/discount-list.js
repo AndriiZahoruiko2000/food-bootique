@@ -5,7 +5,7 @@ import { handleModalOpenClick } from './modal';
 
 document.addEventListener('DOMContentLoaded', async () => {
   const response = await getDiscountProducts();
-  const markupByDiscount = createTemplateDiscountProducts(response);
+  const markupByDiscount = createTemplateDiscountProducts(response.slice(0, 2));
   refs.discountList.innerHTML = markupByDiscount;
 });
 
